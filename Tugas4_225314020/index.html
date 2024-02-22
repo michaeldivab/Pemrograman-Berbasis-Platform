@@ -47,19 +47,45 @@
         #hasil li {
             list-style-type: none;
         }
+
+        /* Penambahan CSS untuk memperkecil ukuran foto profil */
+        .profile-info img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        /* CSS tambahan untuk header */
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center; /* Menengahkan teks */
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .profile-info div {
+            text-align: left;
+        }
     </style>
 </head>
-<header>
-    <h1>Tugas 225314020</h1>
-    <div class="profile-info">
-        <img src="Kak Evangelista5564.JPG" alt="Foto Profil">
-        <div>
-            <p>Nama: Michael Diva Berliano</p>
-            <p>NIM: 225314020</p>
-        </div>
-    </div>
-</header>
 <body>
+    <header>
+        <h1>Tugas 225314020</h1>
+        <div class="profile-info">
+            <img src="Kak Evangelista5564.JPG" alt="Foto Profil">
+            <div>
+                <p>Nama: Michael Diva Berliano</p>
+                <p>NIM: 225314020</p>
+            </div>
+        </div>
+    </header>
     <h1>Tugas 4 - JavaScript</h1>
     <form onsubmit="return false;">
         <label for="nama">Nama:</label>
