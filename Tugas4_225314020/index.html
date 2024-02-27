@@ -1,103 +1,50 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas 4 - JavaScript</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            padding: 20px;
-        }
-        form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        input[type="text"],
-        input[type="number"],
-        button {
-            margin-bottom: 10px;
-            padding: 8px;
-            width: 100%;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        #hasil {
-            margin-top: 20px;
-        }
-        #hasil p {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-        #hasil ul {
-            padding-left: 20px;
-        }
-        #hasil li {
-            list-style-type: none;
-        }
-
-        /* Penambahan CSS untuk memperkecil ukuran foto profil */
-        .profile-info img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-        }
-
-        /* CSS tambahan untuk header */
-        header {
-            background-color: #007bff;
-            color: #fff;
-            padding: 20px;
-            text-align: center; /* Menengahkan teks */
-        }
-
-        .profile-info {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .profile-info div {
-            text-align: left;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tugas 4 - JavaScript</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Tugas 225314020</h1>
+<header>
+    <!-- Header with Name, Nim, and Foto -->
+    <header class="header">
         <div class="profile-info">
-            <img src="Kak Evangelista5564.JPG" alt="Foto Profil">
-            <div>
-                <p>Nama: Michael Diva Berliano</p>
-                <p>NIM: 225314020</p>
-            </div>
+            <h1>Michael Diva B</h1>
+            <p>NIM: 225314020</p>
+        </div>
+        <div class="profile-picture">
+            <img src="Kak Evangelista5564.JPG" alt="Profile Picture">
         </div>
     </header>
-    <h1>Tugas 4 - JavaScript</h1>
-    <form onsubmit="return false;">
-        <label for="nama">Nama:</label>
-        <input type="text" id="nama" name="nama" placeholder="Masukkan nama">
-        <br>
-        <label for="jumlahPilihan">Jumlah Pilihan:</label>
-        <input type="number" id="jumlahPilihan" name="jumlahPilihan" placeholder="Masukkan jumlah pilihan">
-        <br>
-        <br>
-        <button type="submit" onclick="submitForm()">OK</button>
+    
+</header>
+<div class="container">
+    <form id="form">
+        <label for="nama">Nama :</label>
+        <input type="text" id="nama" required>
+
+        <label for="jumlah">Jumlah Pilihan :</label>
+        <input type="number" id="jumlah" min="1" required>
+
+        <button type="button" id="submitBtn">OK</button>
     </form>
-    <div id="hasil"></div> <!-- Ini adalah elemen untuk menampilkan hasil -->
-    <script src="script.js"></script>
+
+    <div id="inputPilihan" style="display: none;">
+        <!-- Inputan Teks Pilihan -->
+    </div>
+
+    <div id="radioPilihan" style="display: none;" class="radio-group">
+        <!-- Pilihan dalam bentuk Radio Button -->
+    </div>
+
+    <div id="hasil" style="display: none;">
+        <!-- Hasil akhir -->
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
